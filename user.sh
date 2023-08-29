@@ -1,7 +1,7 @@
 source Common.sh
 
 component=user
-schema_type="mongodb"
+schema_type="mongo"
 NODEJS
 
 
