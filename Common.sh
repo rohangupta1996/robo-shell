@@ -44,6 +44,7 @@ app_prereq_setup() {
 
 }
 
+
 schema_setup() {
   if [ "${schema_type}" == "mongo" ]; then
     print_head "Copy MongoDB Repo File"
@@ -55,7 +56,7 @@ schema_setup() {
     status_check $?
 
     print_head "Load Schema"
-    mongo --host mongodb.rohandevops.online </app/schema/${component}.js &>>${log_file}
+    mongo --host mongodb-dev.rohandevops.online </app/schema/${component}.js &>>${log_file}
     status_check $?
   elif [ "${schema_type}" == "mysql" ]; then
     print_head "Install MySQL Client"
