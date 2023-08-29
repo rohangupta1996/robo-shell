@@ -55,7 +55,7 @@ schema_setup() {
     status_check $?
 
     print_head "Loading Schema"
-    mongo --host mongodb-dev.rohandevops.online </app/schema/${component}.js &>>${log_file}
+    mongo --host mongodb.rohandevops.online </app/schema/${component}.js &>>${log_file}
     status_check $?
 
   elif [ "${schema_type}" == "mysql" ]; then
