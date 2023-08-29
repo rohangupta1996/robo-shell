@@ -16,7 +16,7 @@ status_check() {
 
 
 app_prereq_setup() {
-  print_head " create Roboshop User"
+        print_head " create Roboshop User"
         id roboshop &>>${log_file}
         if [ $? -ne 0 ]; then
          useradd roboshop &>>${log_file}
