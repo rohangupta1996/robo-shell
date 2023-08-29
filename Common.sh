@@ -45,9 +45,9 @@ app_prereq_setup() {
 }
 
 schema_setup() {
-  if [ "${schema_type}" == "mongodb" ]; then
+  if [ "${schema_type}" == "mongo" ]; then
     print_head "Copying Mongodb repo file"
-    cp ${code_dir}/configs/mongodb.repo /etc/yum.repos.d/mongo.repo &>>${log_file}
+    cp ${code_dir}/configs/mongodb.repo /etc/yum.repos.d/mongodb.repo &>>${log_file}
     status_check $?
 
     print_head "Installing mongo client"
