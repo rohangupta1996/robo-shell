@@ -65,7 +65,7 @@ schema_setup() {
     status_check $?
 
     print_head "Load Schema"
-    mysql -h mysql-dev.rohandevops.online -uroot -p${mysql_root_password} < /app/schema/shipping.sql &>>${log_file}
+    mysql -h mysql-dev.rohandevops.online -uroot -p${mysql_root_password} </app/schema/shipping.sql &>>${log_file}
     status_check $?
   fi
 }
