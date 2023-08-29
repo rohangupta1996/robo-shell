@@ -5,7 +5,7 @@ if [ -z "${mysql_root_password}" ]; then
   exit 1
 fi
 
-component = shipping
+component=shipping
 schema_type="mysql"
 java
 
